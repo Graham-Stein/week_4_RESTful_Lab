@@ -3,3 +3,5 @@
 
 <p>Name: <%= @pizza.pretty_name() %></p>
 <p>Order: <%= @pizza.quantity %> x <%= @pizza.topping() %></p>
+
+<a href="/pizza-orders/<%= @pizza.id %>/edit">Update Order</a>

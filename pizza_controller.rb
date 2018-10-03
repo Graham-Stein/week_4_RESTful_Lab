@@ -29,3 +29,10 @@ post('/pizza-orders') do
   @pizza.save()
   erb(:create)
 end
+
+#EDIT
+get ('/pizza-orders/:id/edit') do
+  id = params[:id].to_i
+  @pizza = PizzaOrder.find(id)
+  erb(:edit)
+end
