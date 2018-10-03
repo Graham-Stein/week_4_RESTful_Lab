@@ -1,16 +1,14 @@
-<form>
-
-
+<form method="POST" action="/pizza-orders/:id" >
 
   <label for ="first-name-field">First name</label>
   <input
-  type="text" name="first_name" value='<%= @pizza.first_name %>'
+  type="text" name="first_name" value='<%= @order.first_name %>'
   id="first-name-field"
   />
 
   <label for ="last-name-field">Last name</label>
   <input
-  type="text" name="last_name" value='<%= @pizza.last_name %>'
+  type="text" name="last_name" value='<%= @order.last_name %>'
   id="last-name-field"
   />
 
@@ -19,12 +17,12 @@
   <input
   type="number"
   name="quantity"
-  value='<%= @pizza.quantity %>'
+  value='<%= @order.quantity %>'
   id="quantity-field"
   />
 
   <label for ="topping-select">Choose your topping</label>
-  <select name="topping" value='<%= @pizza.topping %>' id="topping-select">
+  <select name="topping" value='<%= @order.topping %>' id="topping-select">
     <option value="margherita">Margherita</option>
     <option value="pepperoni">Pepperioni</option>
     <option value="Italian Sausage">Italian Sausage</option>
