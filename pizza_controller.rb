@@ -43,3 +43,11 @@ post('/pizza-orders') do
   @pizza.save()
   erb(:create)
 end
+
+# DELETE
+post('/pizza-orders/:id/delete') do
+  id = params[:id].to_i
+  @pizza = PizzaOrder.find(id)
+  @pizza.delete()
+  redirect to '/pizza-orders'
+end
